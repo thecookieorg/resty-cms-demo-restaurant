@@ -1,37 +1,9 @@
 <%= render 'pages/header' %>
-
-
-
- <!--begin section-white-->
-    <section class="section-white">
-    
-      <!--begin container-->
-      <div class="container"> 
-
-            <!--begin row-->
-            <div class="row">
-            
-                <!--begin col-md-6-->
-                <div class="col-md-12 padding-top-50 padding-bottom-50">
-            
-                    <h1>Online Ordering</h1>
-
-                    <% @ordering_links.each do |f| %>
-                        <iframe width="100%" height="800" src="#{f.url}" frameborder="0" allowfullscreen>
-                        </iframe>
-                        <%= f.url %>
-                    <% end %>                    
-                
-                </div>
-                <!--end col-md-12-->
-                
-               
-                 
-            </div>
-            <!--end row-->
-            
-        </div>
-        <!--end container-->
-        
-    </section>
-    <!--end section-white-->
+<!--begin section-white-->
+<section class="section-white" style="margin-top: 70px;">
+    <% @ordering_links.each do |f| %>
+        <iframe width="100%" height="1200" src="<%= f.url %>" frameborder="0" allowfullscreen>
+        </iframe>
+    <% end %>
+</section>
+<!--end section-white-->
