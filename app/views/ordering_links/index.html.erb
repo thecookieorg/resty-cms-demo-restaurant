@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ordering Links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ordering_links.each do |ordering_link| %>
+      <tr>
+        <td><%= ordering_link.url %></td>
+        <td><%= link_to 'Show', ordering_link %></td>
+        <td><%= link_to 'Edit', edit_ordering_link_path(ordering_link) %></td>
+        <td><%= link_to 'Destroy', ordering_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ordering link', new_ordering_link_path %>
