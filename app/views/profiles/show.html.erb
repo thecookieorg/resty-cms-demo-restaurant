@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Restaurant name:</strong>
+  <%= @profile.restaurant_name %>
+</p>
+
+<p>
+  <strong>Short intro:</strong>
+  <%= @profile.short_intro %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @profile.address %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @profile.about %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @profile.phone_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @profile.email %>
+</p>
+
+<p>
+  <strong>Iphone app:</strong>
+  <%= @profile.iphone_app %>
+</p>
+
+<p>
+  <strong>Android app:</strong>
+  <%= @profile.android_app %>
+</p>
+
+<p>
+  <strong>Monday hours:</strong>
+  <%= @profile.monday_hours %>
+</p>
+
+<p>
+  <strong>Tuesday hours:</strong>
+  <%= @profile.tuesday_hours %>
+</p>
+
+<p>
+  <strong>Wednesday hours:</strong>
+  <%= @profile.wednesday_hours %>
+</p>
+
+<p>
+  <strong>Thursday hours:</strong>
+  <%= @profile.thursday_hours %>
+</p>
+
+<p>
+  <strong>Friday hours:</strong>
+  <%= @profile.friday_hours %>
+</p>
+
+<p>
+  <strong>Saturday hours:</strong>
+  <%= @profile.saturday_hours %>
+</p>
+
+<p>
+  <strong>Sunday hours:</strong>
+  <%= @profile.sunday_hours %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>

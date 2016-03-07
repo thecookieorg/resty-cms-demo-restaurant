@@ -1,9 +1,42 @@
 <%= render 'pages/header' %>
+<!--begin menu-hero-section -->
+    <section id="hero-section" class="menu-hero-section">
+    
+        <!--begin image-overlay -->
+        <div class="image-overlay"></div>
+        <!--end image-overlay -->
+            
+        <!--begin container-->
+        <div class="container image-section-inside">
+
+            <!--begin row-->
+            <div class="row">
+            
+                <!--begin col-md-10-->
+                <div class="col-md-10 col-md-offset-1 text-center">
+                    
+                    <h2 class="section-title white">Skip The Line - Order Online</h2>
+                    
+                    <p class="hero-text wow fadeInUp" data-wow-delay="2s">An unforgettable dining experience in the heart of Covent Garden, London.<br>
+                        Contemporary british menu, inspired by the traditions of Great Britain.</p>
+                    
+                </div>
+                <!--end col-md-10-->
+            
+            </div>
+            <!--end row-->
+            
+        </div>
+        <!--end container-->    
+        
+    </section>
+    <!--end menu-hero-section -->
 <!--begin section-white-->
-<section class="section-white" style="margin-top: 70px;">
+<section class="section-white">
     <% @ordering_links.each do |f| %>
         <iframe width="100%" height="1200" src="<%= f.url %>" frameborder="0" allowfullscreen>
         </iframe>
     <% end %>
 </section>
-<!--end section-white-->
+<!--end section-white-->    
+<%= render 'pages/footer' %>

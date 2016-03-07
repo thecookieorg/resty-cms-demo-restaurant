@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  restaurant_name: MyString
+  short_intro: MyString
+  address: MyString
+  about: MyText
+  phone_number: MyString
+  email: MyString
+  iphone_app: MyString
+  android_app: MyString
+  monday_hours: MyString
+  tuesday_hours: MyString
+  wednesday_hours: MyString
+  thursday_hours: MyString
+  friday_hours: MyString
+  saturday_hours: MyString
+  sunday_hours: MyString
+
+two:
+  restaurant_name: MyString
+  short_intro: MyString
+  address: MyString
+  about: MyText
+  phone_number: MyString
+  email: MyString
+  iphone_app: MyString
+  android_app: MyString
+  monday_hours: MyString
+  tuesday_hours: MyString
+  wednesday_hours: MyString
+  thursday_hours: MyString
+  friday_hours: MyString
+  saturday_hours: MyString
+  sunday_hours: MyString

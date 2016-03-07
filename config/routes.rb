@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  resources :profiles
   resources :ordering_links
   devise_for :admins
   resources :socials
   get 'pages/index'
   get 'pages/order_online'
+  get 'pages/about'
   root 'pages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

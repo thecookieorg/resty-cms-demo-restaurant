@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307185910) do
+ActiveRecord::Schema.define(version: 20160307220313) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -36,6 +36,29 @@ ActiveRecord::Schema.define(version: 20160307185910) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "restaurant_name"
+    t.string   "short_intro"
+    t.string   "address"
+    t.text     "about"
+    t.string   "phone_number"
+    t.string   "email"
+    t.string   "iphone_app"
+    t.string   "android_app"
+    t.string   "monday_hours"
+    t.string   "tuesday_hours"
+    t.string   "wednesday_hours"
+    t.string   "thursday_hours"
+    t.string   "friday_hours"
+    t.string   "saturday_hours"
+    t.string   "sunday_hours"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "admin_id"
+  end
+
+  add_index "profiles", ["admin_id"], name: "index_profiles_on_admin_id"
 
   create_table "socials", force: :cascade do |t|
     t.string   "facebook"

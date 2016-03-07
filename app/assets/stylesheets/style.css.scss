@@ -1030,11 +1030,7 @@ iframe{
 .footer{
 	width:100%;
 	position:relative;
-	background: url(../images/footer-bg.jpg);
-	background-position: center center;
-    background-repeat: no-repeat;
-	background-attachment: fixed;
-    background-size: cover;
+	background: rgba(17, 17, 17, 0.95)!important;
 	margin: 0 auto;
 }
 
@@ -1212,7 +1208,7 @@ ul.footer-list li a:hover{
 .menu-hero-section{
 	width:100%;
 	position:relative;
-	background: url(../images/bg3.jpg) 50% top no-repeat fixed;
+	background-image: url(image_path('bg3.jpg'));
     background-size: cover;
 	color: white;
 	margin: 0 auto;
@@ -1229,10 +1225,32 @@ ul.footer-list li a:hover{
 	left: 0;
 }
 
+
+.home-hero-section{
+	width:100%;
+	position:relative;
+	background-image: url(image_path('rs2.jpg'));
+    background-size: cover;
+	color: white;
+	margin: 0 auto;
+	padding: 210px 0 90px 0;
+}
+
+.home-hero-section .image-overlay{
+	background: rgba(17, 17, 17, 0.75);
+	position: absolute;
+	z-index:10;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+
 .about-hero-section{
 	width:100%;
 	position:relative;
-	background: url(../images/bg0.jpg) 50% top no-repeat fixed;
+	background-image: url(image_path('bg0.jpg'));
     background-size: cover;
 	color: white;
 	margin: 0 auto;
@@ -1252,7 +1270,7 @@ ul.footer-list li a:hover{
 .gallery-hero-section{
 	width:100%;
 	position:relative;
-	background: url(../images/bg5.jpg) 50% top no-repeat fixed;
+	background-image: image-url('bg5.jpg') 50% top no-repeat fixed;
     background-size: cover;
 	color: white;
 	margin: 0 auto;
@@ -1272,7 +1290,7 @@ ul.footer-list li a:hover{
 .reservation-hero-section{
 	width:100%;
 	position:relative;
-	background: url(../images/bg6.jpg) 50% top no-repeat fixed;
+	background-image: image-url('bg6.jpg') 50% top no-repeat fixed;
     background-size: cover;
 	color: white;
 	margin: 0 auto;
@@ -1292,7 +1310,7 @@ ul.footer-list li a:hover{
 .hero-gallery-section{
 	width:100%;
 	position:relative;
-	background: url(../images/bg10.html) 50% top no-repeat fixed;
+	background-image: image-url('bg10.html') 50% top no-repeat fixed;
     background-size: cover;
 	color: white;
 	margin: 0 auto;
@@ -1312,7 +1330,7 @@ ul.footer-list li a:hover{
 .contact-hero-section{
 	width:100%;
 	position:relative;
-	background: url(../images/bg6.jpg) 50% top no-repeat fixed;
+	background-image: image-url('bg6.jpg') 50% top no-repeat fixed;
     background-size: cover;
 	color: white;
 	margin: 0 auto;
@@ -1332,7 +1350,7 @@ ul.footer-list li a:hover{
 .contact2-hero-section{
 	width:100%;
 	position:relative;
-	background: url(../images/content.jpg) 50% top no-repeat fixed;
+	background-image: image-url('content.jpg') 50% top no-repeat fixed;
     background-size: cover;
 	color: white;
 	margin: 0 auto;
@@ -1352,7 +1370,7 @@ ul.footer-list li a:hover{
 .image-section{
 	width:100%;
 	position:relative;
-	background: url(../images/bg4.jpg);
+	background-image: image-url('bg4.jpg');
 	background-position: center center;
     background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -1384,7 +1402,7 @@ ul.footer-list li a:hover{
 .featured-menu-section{
 	width:100%;
 	position:relative;
-	background: url(../images/a3.jpg) 50% 0 no-repeat fixed;
+	background-image: image-url('a3.jpg') 50% top no-repeat fixed;
     background-size: cover;
 	color: white;
 	margin: 0 auto;
@@ -1405,7 +1423,7 @@ ul.footer-list li a:hover{
 .home-menu-section{
 	width:100%;
 	position:relative;
-	background: url(../images/bg8.jpg) 50% 0 no-repeat fixed;
+	background-image: image-url('bg8.jpg') 50% top no-repeat fixed;
     background-size: cover;
 	color: white;
 	margin: 0 auto;
@@ -1475,7 +1493,7 @@ p.home-menu-ingredients{
 .first-menu-section{
 	width:100%;
 	position:relative;
-	background: url(../images/a7.html) 50% 0 no-repeat fixed;
+	background-image: image-url('a7.html') 50% top no-repeat fixed;
     background-size: cover;
 	color: white;
 	margin: 0 auto;

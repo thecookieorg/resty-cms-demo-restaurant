@@ -1,0 +1,77 @@
+<%= form_for(@profile) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :restaurant_name %><br>
+    <%= f.text_field :restaurant_name %>
+  </div>
+  <div class="field">
+    <%= f.label :short_intro %><br>
+    <%= f.text_field :short_intro %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :about %><br>
+    <%= f.text_area :about %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :iphone_app %><br>
+    <%= f.text_field :iphone_app %>
+  </div>
+  <div class="field">
+    <%= f.label :android_app %><br>
+    <%= f.text_field :android_app %>
+  </div>
+  <div class="field">
+    <%= f.label :monday_hours %><br>
+    <%= f.text_field :monday_hours %>
+  </div>
+  <div class="field">
+    <%= f.label :tuesday_hours %><br>
+    <%= f.text_field :tuesday_hours %>
+  </div>
+  <div class="field">
+    <%= f.label :wednesday_hours %><br>
+    <%= f.text_field :wednesday_hours %>
+  </div>
+  <div class="field">
+    <%= f.label :thursday_hours %><br>
+    <%= f.text_field :thursday_hours %>
+  </div>
+  <div class="field">
+    <%= f.label :friday_hours %><br>
+    <%= f.text_field :friday_hours %>
+  </div>
+  <div class="field">
+    <%= f.label :saturday_hours %><br>
+    <%= f.text_field :saturday_hours %>
+  </div>
+  <div class="field">
+    <%= f.label :sunday_hours %><br>
+    <%= f.text_field :sunday_hours %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
