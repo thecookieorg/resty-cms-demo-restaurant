@@ -33,11 +33,34 @@
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         
-                        <li class="social"><a href="#" class="first"><i class="fa fa-twitter"></i></a></li>
-                        <li class="social"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li class="social"><a href="#" class="last"><i class="fa fa-instagram"></i></a></li>
+                       
+                        <% @socials.each do |f| %>
+                            <% if f.facebook.present? %>
+                               <li class="social">
+                                   <%= link_to "http://facebook.com/#{f.facebook}", target: "_blank", class: "first" do %>
+                                       <i class="fa fa-facebook"></i>
+                                   <% end %>
+                               </li>
+                            <% end %>
+                            <% if f.twitter.present? %>
+                               <li class="social">
+                                   <%= link_to "http://twitter.com/#{f.twitter}", target: "_blank" do %>
+                                       <i class="fa fa-twitter"></i>
+                                   <% end %>
+                               </li>
+                            <% end %>
+                            <% if f.instagram.present? %>
+                               <li class="social">
+                                   <%= link_to "http://instagram.com/#{f.instagram}", target: "_blank", class: "last" do %>
+                                       <i class="fa fa-instagram"></i>
+                                   <% end %>
+                               </li>
+                            <% end %>
+                                
+                        <% end %>
                         
-                        <li><a href="#" class="purchase">Purchase</a></li>
+                        
+                        <li><a href="#" class="purchase">Order Online</a></li>
                     </ul>
                 </div>
                 <!--end navbar -->

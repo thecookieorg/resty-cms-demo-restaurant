@@ -47,3 +47,4 @@ end
 
 gem 'google-webfonts-rails', '~> 0.0.4'
 gem 'devise'
+gem 'font-awesome-rails'
