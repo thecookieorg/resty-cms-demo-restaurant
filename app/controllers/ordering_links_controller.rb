@@ -1,5 +1,6 @@
 class OrderingLinksController < ApplicationController
   before_action :set_ordering_link, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!
 
   # GET /ordering_links
   # GET /ordering_links.json
