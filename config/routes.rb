@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admins
+  resources :socials
   get 'pages/index'
   root 'pages#index'
 

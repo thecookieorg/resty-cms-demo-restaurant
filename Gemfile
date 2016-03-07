@@ -45,3 +45,5 @@ group :development do
   gem 'spring'
 end
 
+gem 'google-webfonts-rails', '~> 0.0.4'
+gem 'devise'
