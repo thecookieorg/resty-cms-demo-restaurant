@@ -1,4 +1,5 @@
- <!--begin footer -->
+    <% @profiles.each do |f| %>
+    <!--begin footer -->
     <div class="footer">
         <!--begin container -->
         <div class="container">
@@ -7,9 +8,9 @@
                 <!--begin col-md-3 -->
                 <div class="col-md-3 padding-bottom-50">
                 	<h4>ABOUT US</h4>
-                    <% @profiles.each do |f| %>
+                    
                         <p><%= f.about %></p>
-                    <% end %>
+                    
                 </div>
                 <!--end col-md-3 -->
                 <!--begin col-md-3 -->
@@ -63,7 +64,7 @@
                 <!--begin col-md-3 -->
                 <div class="col-md-3 padding-bottom-50">
                 	<h4>CONTACT DETAILS</h4>
-                    <% @profiles.each do |f| %>
+                    
                         <p class="contact_info">
                             <ul>
                                 <li>Monday: <%= f.monday_hours %></li>
@@ -78,7 +79,7 @@
                         <p class="contact_info"><i class="fa fa-map-marker"></i> <%= f.address %></p>
                         <p class="contact_info"><i class="fa fa-phone"></i> <%= f.phone_number %></p>
                         <p class="contact_info"><i class="fa fa-envelope-square"></i> <%= f.email %></p>
-                    <% end %>
+                    
                 </div>
                 <!--end col-md-3 -->
             </div>
@@ -108,7 +109,7 @@
                             <li>
                                 Follow Us:
                             </li>
-                            <% @profiles.each do |f| %>
+                            
                                 <% if f.facebook_url.present? %>
                                    <li class="social">
                                        <%= link_to "http://facebook.com/#{f.facebook_url}", target: "_blank", class: "first" do %>
@@ -130,7 +131,7 @@
                                        <% end %>
                                    </li>
                                 <% end %>
-                            <% end %>
+                            
                         </ul>
                         <!--end footer_social -->
                     </div>
@@ -143,3 +144,5 @@
         <!--end container -->
     </div>
     <!--end footer -->
+    <% end %>
+

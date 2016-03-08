@@ -1,0 +1,145 @@
+<!--begin footer -->
+    <div class="footer">
+        <!--begin container -->
+        <div class="container">
+            <!--begin row -->
+            <div class="row footer-top">
+                <!--begin col-md-3 -->
+                <div class="col-md-3 padding-bottom-50">
+                	<h4>ABOUT US</h4>
+                    
+                        <p><%= @profile.about %></p>
+                    
+                </div>
+                <!--end col-md-3 -->
+                <!--begin col-md-3 -->
+                <div class="col-md-3 padding-bottom-50">
+                	<h4>LATEST RECIPES</h4>
+                    <ul class="footer-list">
+                        <li class="first"><a href="#" target="blank">Cheddar Cheese Cauliflower Tots</a></li>
+                        <li><a href="#" target="blank">Garlic Chicken &amp; White Wine Sauce</a></li>
+                        <li><a href="#" target="blank">Spinach Mozzarella Grilled Cheese</a></li>
+                        <li><a href="#" target="blank">Mini Chicken Roasted Cups</a></li>
+					</ul>
+                </div>
+                <!--end col-md-3 -->
+                <!--begin col-md-3 -->
+                <div class="col-md-3 padding-bottom-50">
+                	<h4>FEATURED DISHES</h4>
+                    <ul class="footer-gallery">
+                        <li class="popup-gallery">
+                            <a class="popup2" href="/assets/images/instagram1-large.jpg">
+                                <%= image_tag 'instagram1.jpg' %>
+                            </a>
+                        </li>
+                        <li class="popup-gallery">
+                            <a class="popup2" href="images/instagram6-large.jpg">
+                            	<%= image_tag 'instagram6.jpg' %>
+                            </a>
+                        </li>
+                        <li class="popup-gallery">
+                            <a class="popup2" href="images/instagram2-large.jpg">
+                            	<%= image_tag 'instagram2.jpg' %>
+                            </a>
+                        </li>
+                        <li class="popup-gallery">
+                            <a class="popup2" href="images/instagram4-large.jpg">
+                            	<%= image_tag 'instagram4.jpg' %>
+                            </a>
+                        </li>
+                        <li class="popup-gallery">
+                            <a class="popup2" href="images/instagram5-large.jpg">
+                            	<%= image_tag 'instagram5.jpg' %>
+                            </a>
+                        </li>
+                        <li class="popup-gallery">
+                            <a class="popup2" href="images/instagram3-large.jpg">
+                            	<%= image_tag 'instagram3.jpg' %>
+                            </a>
+                        </li>
+					</ul>
+                </div>
+                <!--end col-md-3 -->
+                <!--begin col-md-3 -->
+                <div class="col-md-3 padding-bottom-50">
+                	<h4>CONTACT DETAILS</h4>
+                    
+                        <p class="contact_info">
+                            <ul>
+                                <li>Monday: <%= @profile.monday_hours %></li>
+                                <li>Tuesday: <%= @profile.tuesday_hours %></li>
+                                <li>Wednesday: <%= @profile.wednesday_hours %></li>
+                                <li>Thursday: <%= @profile.thursday_hours %></li>
+                                <li>Friday: <%= @profile.friday_hours %></li>
+                                <li>Saturday: <%= @profile.saturday_hours %></li>
+                                <li>Sunday: <%= @profile.sunday_hours %></li>
+                            </ul>
+                        </p>
+                        <p class="contact_info"><i class="fa fa-map-marker"></i> <%= @profile.address %></p>
+                        <p class="contact_info"><i class="fa fa-phone"></i> <%= @profile.phone_number %></p>
+                        <p class="contact_info"><i class="fa fa-envelope-square"></i> <%= @profile.email %></p>
+                    
+                </div>
+                <!--end col-md-3 -->
+            </div>
+            <!--end row -->
+            <!--begin row -->
+            <div class="row">
+                <!--begin footer-bottom -->
+                <div class="footer-bottom">
+                    <!--begin col-md-5 -->
+                    <div class="col-md-5">
+                        <!--begin copyright -->
+                        <div class="copyright ">
+                            <p>© 2016 Fable. Designed by <%= link_to 'The Cookie Dining', 'http://thecookiedining.com', target: "_blank" %></p>
+                        </div>
+                        <!--end copyright -->
+                    </div>
+                    <!--end col-md-5 -->
+                    <!--begin col-md-2 -->
+                    <div class="col-md-2 text-center">
+                    	<a href="#hero-section" class="scrool top-scroll"><i class="fa fa-angle-double-up"></i></a>
+                    </div>
+                    <!--end col-md-2 -->
+                    <!--begin col-md-5 -->
+                    <div class="col-md-5">
+                        <!--begin footer_social -->
+                        <ul class="footer_social">
+                            <li>
+                                Follow Us:
+                            </li>
+                            
+                                <% if @profile.facebook_url.present? %>
+                                   <li class="social">
+                                       <%= link_to "http://facebook.com/#{@profile.facebook_url}", target: "_blank", class: "first" do %>
+                                           <i class="fa fa-facebook"></i>
+                                       <% end %>
+                                   </li>
+                                <% end %>
+                                <% if @profile.twitter_url.present? %>
+                                   <li class="social">
+                                       <%= link_to "http://twitter.com/#{@profile.twitter_url}", target: "_blank" do %>
+                                           <i class="fa fa-twitter"></i>
+                                       <% end %>
+                                   </li>
+                                <% end %>
+                                <% if @profile.instagram_url.present? %>
+                                   <li class="social">
+                                       <%= link_to "http://instagram.com/#{@profile.instagram_url}", target: "_blank", class: "last" do %>
+                                           <i class="fa fa-instagram"></i>
+                                       <% end %>
+                                   </li>
+                                <% end %>
+                            
+                        </ul>
+                        <!--end footer_social -->
+                    </div>
+                    <!--end col-md-5 -->
+                </div>
+                <!--end footer-bottom -->
+            </div>
+            <!--end row -->
+        </div>
+        <!--end container -->
+    </div>
+    <!--end footer -->

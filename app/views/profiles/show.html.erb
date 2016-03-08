@@ -1,79 +1,170 @@
-<p id="notice"><%= notice %></p>
+<%= render 'profiles/header' %>
+<section id="hero-section" class="home-hero-section">
+        <!--begin image-overlay -->
+        <div class="image-overlay"></div>
+        <!--end image-overlay -->
+        <!--begin container-->
+        <div class="container image-section-inside">
+            <!--begin row-->
+            <div class="row">
+                <!--begin col-md-10-->
+                <div class="col-md-10 col-md-offset-1 text-center">
+                    
+                        <h2 class="section-title white">Welcome to <%= @profile.restaurant_name %></h2>
+                        <p class="hero-text"><%= @profile.short_intro %></p>    
+                    
+                </div>
+                <!--end col-md-10-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->    
+    </section>
+    <!--begin section-white-->
+    <section class="section-white">
+        <!--begin container-->
+        <div class="container"> 
+            <!--begin row-->
+            <div class="row">
+                <!--begin col-md-6-->
+                <div class="col-md-6 text-center padding-top-50 padding-bottom-50">
+                    <span class="comic-text">Discover</span>
+                    <h2 class="section-title">Our Story</h2>
+                    
+                        <p><%= @profile.about %></p>
+                        <%= link_to "More About Us", pages_about_path, class: "btn btn-lg btn-yellow" %>
+                    
+                </div>
+                <!--end col-md-6-->
+                <!--begin col-md-6-->
+                <div class="col-md-6">
+                    <!--begin carousel1-->
+                    <div id="myCarousel1" class="carousel carousel1 slide" data-interval="true">
+                        <!--begin carousel-inner-->
+                        <div class="carousel-inner">
+                            <!--begin carousel item-->
+                            <div class="item active">
+                                <!--begin image-wrapper-->
+                                <div class="image-wrapper">
+                                    <%= image_tag 'food3.jpg', class: "width-100" %>
+                                </div>
+                                <!--end image-wrapper-->
+                            </div>
+                            <!--end carousel item-->
+                            <!--begin carousel item-->
+                            <div class="item">
+                                <!--begin image-wrapper-->
+                                <div class="image-wrapper">
+                                    <%= image_tag 'food2.jpg', class: "width-100" %>
+                                </div>
+                                <!--end image-wrapper-->
+                            </div>
+                            <!--end carousel item-->
+                        </div>
+                        <!--end carousel-inner-->
+                        <!-- begin carousel-indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel1" data-slide-to="1"></li>
+                        </ol>
+                        <!-- end carousel-indicators -->
+                            
+                    </div>
+                    <!--end carousel1-->
+                </div>
+                <!--end col-md-6-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
+    <!--end section-white-->
+    <!--begin image-section -->
+    <section class="image-section">
+        <!--begin image-overlay -->
+        <div class="image-overlay"></div>
+        <!--end image-overlay -->
+        <!--begin container-->
+        <div class="container image-section-inside">
+            <!--begin row-->
+            <div class="row">
+                
+                            <!--begin col-md-10-->
+                            <div class="col-md-10 col-md-offset-1 text-center">
+                    
+                                <span class="comic-text">Skip the line - Order online</span>
+                                <br>
+                                <br>
+                                <div class="row">
+                                        <% if @profile.iphone_app.present? && @profile.android_app.present? %>
+                                            <div class="col-md-6">
+                                                <%= link_to @profile.iphone_app do %>
+                                                    <%= image_tag 'app-store.png', class: "img-rounded" %>
+                                                <% end %>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <%= link_to @profile.android_app do %>
+                                                    <%= image_tag 'get-it-on-google-play.jpg', class: "img-rounded" %>
+                                                <% end %>
+                                            </div>       
+                                        <% elsif @profile.iphone_app.present? && @profile.android_app.blank? %>
+                                            <div class="col-md-12">
+                                                <%= link_to @profile.iphone_app do %>
+                                                    <%= image_tag 'app-store.png', class: "img-rounded" %>
+                                                <% end %>
+                                            </div>
+                                        <% elsif @profile.iphone_app.blank? && @profile.android_app.present? %>
+                                            <div class="col-md-12">
+                                                <%= link_to @profile.android_app do %>
+                                                    <%= image_tag 'get-it-on-google-play.jpg', class: "img-rounded" %>
+                                                <% end %>
+                                            </div>
+                                        <% elsif @profile.iphone_app.blank? && @profile.android_app.blank? %>
+                                           <button class="btn btn-warning btn-lg purchase" data-toggle="modal" data-target="#myModal">Order Online</button>
+                                        <% end %>
+                                </div>
+                                <!-- end of row -->
+                            </div>
+                            <!-- col-md-10 col-md-offset-1 text-center end -->
+                        
+                    
+                    
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
+    <!--end image-section -->
+    <!--begin instagram feed -->
+    <div id="instafeed">
+        <!--begin iinstagram-text -->
+        <div class="instagram-text">
+            <a href="#" target="_blank" class="instagram-icon"><i class="fa fa-instagram"></i></a>
+            <p>Follow us on Instagram!</p>
+        </div>
+        <!--end instagram-text -->
+    </div>
+    <!--end instagram feed -->
+    
+    
+   
+   
 
-<p>
-  <strong>Restaurant name:</strong>
-  <%= @profile.restaurant_name %>
-</p>
-
-<p>
-  <strong>Short intro:</strong>
-  <%= @profile.short_intro %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @profile.address %>
-</p>
-
-<p>
-  <strong>About:</strong>
-  <%= @profile.about %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @profile.phone_number %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @profile.email %>
-</p>
-
-<p>
-  <strong>Iphone app:</strong>
-  <%= @profile.iphone_app %>
-</p>
-
-<p>
-  <strong>Android app:</strong>
-  <%= @profile.android_app %>
-</p>
-
-<p>
-  <strong>Monday hours:</strong>
-  <%= @profile.monday_hours %>
-</p>
-
-<p>
-  <strong>Tuesday hours:</strong>
-  <%= @profile.tuesday_hours %>
-</p>
-
-<p>
-  <strong>Wednesday hours:</strong>
-  <%= @profile.wednesday_hours %>
-</p>
-
-<p>
-  <strong>Thursday hours:</strong>
-  <%= @profile.thursday_hours %>
-</p>
-
-<p>
-  <strong>Friday hours:</strong>
-  <%= @profile.friday_hours %>
-</p>
-
-<p>
-  <strong>Saturday hours:</strong>
-  <%= @profile.saturday_hours %>
-</p>
-
-<p>
-  <strong>Sunday hours:</strong>
-  <%= @profile.sunday_hours %>
-</p>
-
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        
+      </div>
+      <div class="modal-body">
+           <iframe width="100%" height="1050" src="<%= @profile.ordering_url %>" frameborder="0" allowfullscreen>
+            </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+<%= render 'profiles/footer' %>

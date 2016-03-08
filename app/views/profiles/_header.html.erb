@@ -1,4 +1,4 @@
- <!--begin header -->
+   <!--begin header -->
     <header class="header">
         <!--begin nav -->
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -18,36 +18,31 @@
                 </div>
                 <div id="navbar-collapse-02" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">			      
-                        <li><%= link_to 'Home', root_path %></li>
-                        <li><%= link_to 'About Us', pages_about_path %></li>
-                        <li><%= link_to 'Menu', '#' %></li>
-                        <li><%= link_to 'Events', '#' %></li>
-                        <li><%= link_to 'Gallery', '#' %></li>
-                        <li><%= link_to 'Contact', '#' %></li>
-                        <% @profiles.each do |f| %>
-                            <% if f.facebook_url.present? %>
+                            
+                        <li><%= link_to 'Change Location', root_path %></li>
+                            <% if @profile.facebook_url.present? %>
                                <li class="social">
-                                   <%= link_to "http://facebook.com/#{f.facebook_url}", target: "_blank", class: "first" do %>
+                                   <%= link_to "http://facebook.com/#{@profile.facebook_url}", target: "_blank", class: "first" do %>
                                        <i class="fa fa-facebook"></i>
                                    <% end %>
                                </li>
                             <% end %>
-                            <% if f.twitter_url.present? %>
+                            <% if @profile.twitter_url.present? %>
                                <li class="social">
-                                   <%= link_to "http://twitter.com/#{f.twitter_url}", target: "_blank" do %>
+                                   <%= link_to "http://twitter.com/#{@profile.twitter_url}", target: "_blank" do %>
                                        <i class="fa fa-twitter"></i>
                                    <% end %>
                                </li>
                             <% end %>
-                            <% if f.instagram_url.present? %>
+                            <% if @profile.instagram_url.present? %>
                                <li class="social">
-                                   <%= link_to "http://instagram.com/#{f.instagram_url}", target: "_blank", class: "last" do %>
+                                   <%= link_to "http://instagram.com/#{@profile.instagram_url}", target: "_blank", class: "last" do %>
                                        <i class="fa fa-instagram"></i>
                                    <% end %>
                                </li>
                             <% end %>
-                        <% end %>
-                        <li><%= link_to 'Order Online', pages_order_online_path, class: "purchase" %></li>
+                          
+                        <li><button class="btn btn-warning btn-lg purchase" data-toggle="modal" data-target="#myModal">Order Online</button></li>
                     </ul>
                 </div>
                 <!--end navbar -->
