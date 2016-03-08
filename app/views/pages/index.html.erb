@@ -1,201 +1,142 @@
 <%= render 'pages/header' %>
-      
-       <section id="hero-section" class="home-hero-section">
-    
-        <!--begin image-overlay -->
-        <div class="image-overlay"></div>
-        <!--end image-overlay -->
-            
-        <!--begin container-->
-        <div class="container image-section-inside">
-
-            <!--begin row-->
-            <div class="row">
-            
-                <!--begin col-md-10-->
-                <div class="col-md-10 col-md-offset-1 text-center">
-                    
-                    <% @profiles.each do |f| %>
-                        <h2 class="section-title white">Welcome to <%= f.restaurant_name %></h2>
-                        <p class="hero-text"><%= f.short_intro %></p>    
-                    <% end %>
-                </div>
-                <!--end col-md-10-->
+<section id="hero-section" class="home-hero-section">
+    <!--begin image-overlay -->
+    <div class="image-overlay"></div>
+    <!--end image-overlay -->
+    <!--begin container-->
+    <div class="container image-section-inside">
+        <!--begin row-->
+        <div class="row">
+            <!--begin col-md-10-->
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <% @profiles.each do |f| %>
+                    <h2 class="section-title white">Welcome to <%= f.restaurant_name %></h2>
+                    <p class="hero-text"><%= f.short_intro %></p>    
+                <% end %>
             </div>
-            <!--end row-->
+            <!--end col-md-10-->
         </div>
-        <!--end container-->    
-    </section>
-    
-    <!--begin section-white-->
-    <section class="section-white">
-    
-      <!--begin container-->
-      <div class="container"> 
-
-            <!--begin row-->
-            <div class="row">
-            
-                <!--begin col-md-6-->
-                <div class="col-md-6 text-center padding-top-50 padding-bottom-50">
-            
-                    <span class="comic-text">Discover</span>
-                    
-                    <h2 class="section-title">Our Story</h2>
-                    
-                     <% @profiles.each do |f| %>
-                        <p><%= f.about %></p>
-                        <%= link_to "More About Us", pages_about_path, class: "btn btn-lg btn-yellow" %>
-                    <% end %>
-                    
-                    
-                
-                </div>
-                <!--end col-md-6-->
-                
-                <!--begin col-md-6-->
-                <div class="col-md-6 wow slideInRight">
-                                    
-                    <!--begin carousel1-->
-                    <div id="myCarousel1" class="carousel carousel1 slide" data-interval="true">
-                        
-                        <!--begin carousel-inner-->
-                        <div class="carousel-inner">
-                        
-                            <!--begin carousel item-->
-                            <div class="item active">
-                            
-                                <!--begin image-wrapper-->
-                                <div class="image-wrapper">
-                                    <%= image_tag 'food3.jpg', class: "width-100" %>
-                                    
-                                </div>
-                                <!--end image-wrapper-->
-                                
-                            </div>
-                            <!--end carousel item-->
-                            
-                            <!--begin carousel item-->
-                            <div class="item">
-                            
-                                <!--begin image-wrapper-->
-                                <div class="image-wrapper">
-                                    <%= image_tag 'food2.jpg', class: "width-100" %>
-                                </div>
-                                <!--end image-wrapper-->
-                                
-                            </div>
-                            <!--end carousel item-->
-                                                       
-                        </div>
-                        <!--end carousel-inner-->
-                        
-                        <!-- begin carousel-indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel1" data-slide-to="1"></li>
-                        </ol>
-                        <!-- end carousel-indicators -->
-                        
-                    </div>
-                    <!--end carousel1-->
-                                            
-                </div>
-                <!--end col-md-6-->
-                 
-            </div>
-            <!--end row-->
-            
-        </div>
-        <!--end container-->
-        
-    </section>
-    <!--end section-white-->
-    
-    <!--begin image-section -->
-    <section class="image-section">
-    
-        <!--begin image-overlay -->
-        <div class="image-overlay"></div>
-        <!--end image-overlay -->
-            
-        <!--begin container-->
-        <div class="container image-section-inside">
-
-            <!--begin row-->
-            <div class="row">
-            
-                <!--begin col-md-10-->
-                <div class="col-md-10 col-md-offset-1 text-center">
-                
-                    <span class="comic-text">Download Our Apps</span>
-                    <br>
-                    <br>
-                    <div class="row">
-                        <% @profiles.each do |f| %>
-                            <% if f.iphone_app.present? && f.android_app.present? %>
-                                <div class="col-md-6">
-                                    <%= link_to f.iphone_app do %>
-                                        <%= image_tag 'app-store.png', class: "img-rounded" %>
-                                    <% end %>
-                                </div>
-                                <div class="col-md-6">
-                                    <%= link_to f.android_app do %>
-                                        <%= image_tag 'get-it-on-google-play.jpg', class: "img-rounded" %>
-                                    <% end %>
-                                </div>       
-                            <% elsif f.iphone_app.present? && f.android_app.blank? %>
-                                <div class="col-md-12">
-                                    <%= link_to f.iphone_app do %>
-                                        <%= image_tag 'app-store.png', class: "img-rounded" %>
-                                    <% end %>
-                                </div>
-                            <% elsif f.iphone_app.blank? && f.android_app.present? %>
-                                <div class="col-md-12">
-                                    <%= link_to f.android_app do %>
-                                        <%= image_tag 'get-it-on-google-play.jpg', class: "img-rounded" %>
-                                    <% end %>
-                                </div>
-                            <% end %>
-                        
-                        <% end %>
-                    </div>
-                    
-                    
-                </div>
-                <!--end col-md-6-->
-            
-            </div>
-            <!--end row-->
-            
-        </div>
-        <!--end container-->
-        
-    </section>
-    <!--end image-section -->
-    
-  
-    
-   
-    
-   
-    
-    <!--begin instagram feed -->
-    <div id="instafeed">
-        
-        <!--begin iinstagram-text -->
-        <div class="instagram-text">
-        
-        	<a href="#" target="_blank" class="instagram-icon"><i class="fa fa-instagram"></i></a>
-        
-        	<p>Follow us on Instagram<br>for latest news.</p>
-        
-        </div>
-        <!--end instagram-text -->
-        
+        <!--end row-->
     </div>
-    <!--end instagram feed -->
-    
-   
-    
-   <%= render 'pages/footer' %>
+    <!--end container-->    
+</section>
+<!--begin section-white-->
+<section class="section-white">
+    <!--begin container-->
+    <div class="container"> 
+        <!--begin row-->
+        <div class="row">
+            <!--begin col-md-6-->
+            <div class="col-md-6 text-center padding-top-50 padding-bottom-50">
+                <span class="comic-text">Discover</span>
+                <h2 class="section-title">Our Story</h2>
+                <% @profiles.each do |f| %>
+                    <p><%= f.about %></p>
+                    <%= link_to "More About Us", pages_about_path, class: "btn btn-lg btn-yellow" %>
+                <% end %>
+            </div>
+            <!--end col-md-6-->
+            <!--begin col-md-6-->
+            <div class="col-md-6">
+                <!--begin carousel1-->
+                <div id="myCarousel1" class="carousel carousel1 slide" data-interval="true">
+                    <!--begin carousel-inner-->
+                    <div class="carousel-inner">
+                        <!--begin carousel item-->
+                        <div class="item active">
+                            <!--begin image-wrapper-->
+                            <div class="image-wrapper">
+                                <%= image_tag 'food3.jpg', class: "width-100" %>
+                            </div>
+                            <!--end image-wrapper-->
+                        </div>
+                        <!--end carousel item-->
+                        <!--begin carousel item-->
+                        <div class="item">
+                            <!--begin image-wrapper-->
+                            <div class="image-wrapper">
+                                <%= image_tag 'food2.jpg', class: "width-100" %>
+                            </div>
+                            <!--end image-wrapper-->
+                        </div>
+                        <!--end carousel item-->
+                    </div>
+                    <!--end carousel-inner-->
+                    <!-- begin carousel-indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel1" data-slide-to="1"></li>
+                    </ol>
+                    <!-- end carousel-indicators -->
+                        
+                </div>
+                <!--end carousel1-->
+            </div>
+            <!--end col-md-6-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+</section>
+<!--end section-white-->
+<!--begin image-section -->
+<section class="image-section">
+    <!--begin image-overlay -->
+    <div class="image-overlay"></div>
+    <!--end image-overlay -->
+    <!--begin container-->
+    <div class="container image-section-inside">
+        <!--begin row-->
+        <div class="row">
+            <!--begin col-md-10-->
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <span class="comic-text">Download Our Apps</span>
+                <br>
+                <br>
+                <div class="row">
+                    <% @profiles.each do |f| %>
+                        <% if f.iphone_app.present? && f.android_app.present? %>
+                            <div class="col-md-6">
+                                <%= link_to f.iphone_app do %>
+                                    <%= image_tag 'app-store.png', class: "img-rounded" %>
+                                <% end %>
+                            </div>
+                            <div class="col-md-6">
+                                <%= link_to f.android_app do %>
+                                    <%= image_tag 'get-it-on-google-play.jpg', class: "img-rounded" %>
+                                <% end %>
+                            </div>       
+                        <% elsif f.iphone_app.present? && f.android_app.blank? %>
+                            <div class="col-md-12">
+                                <%= link_to f.iphone_app do %>
+                                    <%= image_tag 'app-store.png', class: "img-rounded" %>
+                                <% end %>
+                            </div>
+                        <% elsif f.iphone_app.blank? && f.android_app.present? %>
+                            <div class="col-md-12">
+                                <%= link_to f.android_app do %>
+                                    <%= image_tag 'get-it-on-google-play.jpg', class: "img-rounded" %>
+                                <% end %>
+                            </div>
+                        <% end %>
+                    <% end %>
+                </div>
+            </div>
+            <!--end col-md-6-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+</section>
+<!--end image-section -->
+<!--begin instagram feed -->
+<div id="instafeed">
+    <!--begin iinstagram-text -->
+    <div class="instagram-text">
+        <a href="#" target="_blank" class="instagram-icon"><i class="fa fa-instagram"></i></a>
+        <p>Follow us on Instagram!</p>
+    </div>
+    <!--end instagram-text -->
+</div>
+<!--end instagram feed -->
+<%= render 'pages/footer' %>

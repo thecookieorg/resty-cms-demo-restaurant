@@ -1,0 +1,158 @@
+<%= render 'dashboards/nav' %>
+<section class="section-white">
+    <!--begin container-->
+    <div class="container"> 
+        <!--begin row-->
+        <div class="row">
+            <!--begin col-md-12-->
+            <div class="col-md-12">
+                <span class="comic-text">Welcome!</span>
+                <h2 class="section-title">This is your dashboard.</h2>
+            </div>
+            <!--end col-md-12-->
+        </div>
+        <!--end row-->
+        <!-- begin row -->
+        <div class="row" style="margin-top: 20px;">
+            <% @profiles.each do |f| %>
+            <div class="col-md-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="font-size: 20px;"><%= f.restaurant_name %>, <%= f.address %> Location</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            <strong>Restaurant Name:</strong><br>
+                            <%= f.restaurant_name %>
+                        </p>
+                        <p>
+                            <strong>Short Description:</strong><br>
+                            <%= f.short_intro %>
+                        </p>
+                        <p>
+                            <strong>About:</strong><br>
+                            <%= f.about %>
+                        </p>
+                        <p>
+                            <strong>Address:</strong><br>
+                            <%= f.address %>
+                        </p>
+                        <p>
+                            <strong>Phone Number:</strong><br>
+                            <%= f.phone_number %>
+                        </p>
+                        <p>
+                            <strong>E-Mail:</strong><br>
+                            <%= f.email %>
+                        </p>
+                        <p>
+                            <strong>iPhone App:</strong><br>
+                            <%= f.iphone_app %>
+                        </p>
+                        <p>
+                            <strong>Android App:</strong><br>
+                            <%= f.android_app %>
+                        </p>
+                    </div>
+                  <!-- panel-body end -->
+                </div>
+                <!-- panel end -->
+            </div>
+            <!-- col-md-9 end -->
+            
+            <!-- start col-md-3 -->
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="font-size: 20px;">Working Hours</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            <strong>Monday Hours:</strong><br>
+                            <%= f.monday_hours %>
+                        </p>
+                        <p>
+                            <strong>Tuesday Hours:</strong><br>
+                            <%= f.tuesday_hours %>
+                        </p>
+                        <p>
+                            <strong>Wednesday Hours:</strong><br>
+                            <%= f.wednesday_hours %>
+                        </p>
+                        <p>
+                            <strong>Thursday Hours:</strong><br>
+                            <%= f.thursday_hours %>
+                        </p>
+                        <p>
+                            <strong>Friday Hours:</strong><br>
+                            <%= f.friday_hours %>
+                        </p>
+                        <p>
+                            <strong>Saturday Hours:</strong><br>
+                            <%= f.saturday_hours %>
+                                </p>
+                        <p>
+                            <strong>Sunday Hours:</strong><br>
+                            <%= f.sunday_hours %>
+                        </p>
+                    </div>
+                    <!-- panel-body end -->
+                </div>
+                <!-- panel end -->
+            </div>
+            <!-- col-3-md end -->
+            <% end %>
+        </div>
+        <!-- end row -->
+        <hr>
+        <!-- start row -->
+        <div class="row">
+            <div class="col-md-6">
+                 <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="font-size: 20px;">Social Media Links</h3>
+                    </div>
+                    <div class="panel-body">
+                        <% @socials.each do |social| %>
+                            <p>
+                                <strong>Facebook Page:</strong><br>
+                                <%= social.facebook %>
+                            </p>
+                            <p>
+                                <strong>Twitter Page:</strong><br>
+                                <%= social.twitter %>
+                            </p>
+                            <p>
+                                <strong>instagram Page:</strong><br>
+                                <%= social.instagram %>
+                            </p>
+                        <% end %>
+                    </div>
+                    <!-- panel-body end -->
+                </div>
+                <!-- panel end -->
+            </div>
+            <!-- col-md-6 end -->
+            <div class="col-md-6">
+                 <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="font-size: 20px;">Online Ordering Widget</h3>
+                    </div>
+                    <div class="panel-body">
+                        <% @ordering_links.each do |f| %>
+                            <p>
+                                <strong>Online Ordering Link:</strong><br>
+                                <%= f.url %>
+                            </p>
+                        <% end %>
+                    </div>
+                    <!-- panel-body end -->
+                </div>
+                <!-- panel end -->
+            </div>
+            <!-- col-md-6 end -->
+        </div>
+        <!-- row end -->
+    </div>
+    <!--end container-->
+</section>

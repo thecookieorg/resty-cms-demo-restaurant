@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'dashboards/index'
+
   resources :profiles
   resources :ordering_links
   devise_for :admins
@@ -6,6 +8,11 @@ Rails.application.routes.draw do
   get 'pages/index'
   get 'pages/order_online'
   get 'pages/about'
+  
+  scope :admins do
+    root :to => 'dashboards#index', :as => :admin_root
+  end
+  
   root 'pages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

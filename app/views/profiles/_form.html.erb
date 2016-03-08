@@ -11,67 +11,67 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :restaurant_name %><br>
-    <%= f.text_field :restaurant_name %>
+    <%= f.text_field :restaurant_name, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :short_intro %><br>
-    <%= f.text_field :short_intro %>
+    <%= f.text_field :short_intro, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :about %><br>
-    <%= f.text_area :about %>
+    <%= f.text_area :about, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :phone_number %><br>
-    <%= f.text_field :phone_number %>
+    <%= f.text_field :phone_number, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :iphone_app %><br>
-    <%= f.text_field :iphone_app %>
+    <%= f.text_field :iphone_app, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :android_app %><br>
-    <%= f.text_field :android_app %>
+    <%= f.text_field :android_app, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :monday_hours %><br>
-    <%= f.text_field :monday_hours %>
+    <%= f.text_field :monday_hours, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :tuesday_hours %><br>
-    <%= f.text_field :tuesday_hours %>
+    <%= f.text_field :tuesday_hours, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :wednesday_hours %><br>
-    <%= f.text_field :wednesday_hours %>
+    <%= f.text_field :wednesday_hours, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :thursday_hours %><br>
-    <%= f.text_field :thursday_hours %>
+    <%= f.text_field :thursday_hours, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :friday_hours %><br>
-    <%= f.text_field :friday_hours %>
+    <%= f.text_field :friday_hours, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :saturday_hours %><br>
-    <%= f.text_field :saturday_hours %>
+    <%= f.text_field :saturday_hours, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :sunday_hours %><br>
-    <%= f.text_field :sunday_hours %>
+    <%= f.text_field :sunday_hours, class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit 'Update Profile', class: "bth btn-lg btn-yellow" %>
   </div>
 <% end %>
