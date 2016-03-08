@@ -70,6 +70,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:restaurant_name, :short_intro, :address, :about, :phone_number, :email, :iphone_app, :android_app, :monday_hours, :tuesday_hours, :wednesday_hours, :thursday_hours, :friday_hours, :saturday_hours, :sunday_hours)
+      params.require(:profile).permit(:restaurant_name, :short_intro, :address, :about, :phone_number, :email, :iphone_app, :android_app, :monday_hours, :tuesday_hours, :wednesday_hours, :thursday_hours, :friday_hours, :saturday_hours, :sunday_hours, :facebook_url, :twitter_url, :instagram_url, :ordering_url)
     end
 end

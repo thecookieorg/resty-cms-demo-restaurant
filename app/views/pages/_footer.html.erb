@@ -108,24 +108,24 @@
                             <li>
                                 Follow Us:
                             </li>
-                            <% @socials.each do |f| %>
-                                <% if f.facebook.present? %>
+                            <% @profiles.each do |f| %>
+                                <% if f.facebook_url.present? %>
                                    <li class="social">
-                                       <%= link_to "http://facebook.com/#{f.facebook}", target: "_blank", class: "first" do %>
+                                       <%= link_to "http://facebook.com/#{f.facebook_url}", target: "_blank", class: "first" do %>
                                            <i class="fa fa-facebook"></i>
                                        <% end %>
                                    </li>
                                 <% end %>
-                                <% if f.twitter.present? %>
+                                <% if f.twitter_url.present? %>
                                    <li class="social">
-                                       <%= link_to "http://twitter.com/#{f.twitter}", target: "_blank" do %>
+                                       <%= link_to "http://twitter.com/#{f.twitter_url}", target: "_blank" do %>
                                            <i class="fa fa-twitter"></i>
                                        <% end %>
                                    </li>
                                 <% end %>
-                                <% if f.instagram.present? %>
+                                <% if f.instagram_url.present? %>
                                    <li class="social">
-                                       <%= link_to "http://instagram.com/#{f.instagram}", target: "_blank", class: "last" do %>
+                                       <%= link_to "http://instagram.com/#{f.instagram_url}", target: "_blank", class: "last" do %>
                                            <i class="fa fa-instagram"></i>
                                        <% end %>
                                    </li>

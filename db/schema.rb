@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307220313) do
+ActiveRecord::Schema.define(version: 20160308015128) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -56,6 +56,10 @@ ActiveRecord::Schema.define(version: 20160307220313) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "admin_id"
+    t.string   "facebook_url"
+    t.string   "twitter_url"
+    t.string   "instagram_url"
+    t.string   "ordering_url"
   end
 
   add_index "profiles", ["admin_id"], name: "index_profiles_on_admin_id"

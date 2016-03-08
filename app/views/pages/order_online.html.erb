@@ -23,8 +23,8 @@
     <!--end menu-hero-section -->
 <!--begin section-white-->
 <section class="section-white">
-    <% @ordering_links.each do |f| %>
-        <iframe width="100%" height="1200" src="<%= f.url %>" frameborder="0" allowfullscreen>
+    <% @profiles.each do |f| %>
+        <iframe width="100%" height="1800" src="<%= f.ordering_url %>" frameborder="0" allowfullscreen>
         </iframe>
     <% end %>
 </section>
