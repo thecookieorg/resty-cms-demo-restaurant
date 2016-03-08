@@ -17,9 +17,9 @@
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <% @profiles.each do |profile| %>
+        
             <li><%= link_to 'Manage Locations', profiles_path %></li>
-        <% end %>
+        
         <li><%= link_to('Logout', destroy_admin_session_path, :method => :delete) %></li>
         
         
