@@ -101,7 +101,6 @@
                 <!-- panel end -->
             </div>
             <!-- col-3-md end -->
-            <% end %>
         </div>
         <!-- end row -->
         <hr>
@@ -113,20 +112,18 @@
                         <h3 class="panel-title" style="font-size: 20px;">Social Media Links</h3>
                     </div>
                     <div class="panel-body">
-                        <% @socials.each do |social| %>
                             <p>
                                 <strong>Facebook Page:</strong><br>
-                                <%= social.facebook %>
+                                <%= f.facebook_url %>
                             </p>
                             <p>
                                 <strong>Twitter Page:</strong><br>
-                                <%= social.twitter %>
+                                <%= f.twitter_url %>
                             </p>
                             <p>
                                 <strong>instagram Page:</strong><br>
-                                <%= social.instagram %>
+                                <%= f.instagram_url %>
                             </p>
-                        <% end %>
                     </div>
                     <!-- panel-body end -->
                 </div>
@@ -139,18 +136,18 @@
                         <h3 class="panel-title" style="font-size: 20px;">Online Ordering Widget</h3>
                     </div>
                     <div class="panel-body">
-                        <% @ordering_links.each do |f| %>
                             <p>
                                 <strong>Online Ordering Link:</strong><br>
-                                <%= f.url %>
+                                <%= f.ordering_url %>
                             </p>
-                        <% end %>
                     </div>
                     <!-- panel-body end -->
                 </div>
                 <!-- panel end -->
             </div>
             <!-- col-md-6 end -->
+            <% end %>
+            <hr>
         </div>
         <!-- row end -->
     </div>

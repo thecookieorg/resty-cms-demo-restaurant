@@ -20,12 +20,6 @@
         <% @profiles.each do |profile| %>
             <li><%= link_to 'Manage Locations', profiles_path %></li>
         <% end %>
-        <% @socials.each do |social| %>
-            <li><%= link_to 'Manage Social Media Links', edit_social_path(social) %></li>
-        <% end %>
-        <% @ordering_links.each do |ordering_link| %>
-            <li><%= link_to 'Manage Online Ordeiring Link', edit_ordering_link_path(ordering_link) %></li>
-        <% end %>
         <li><%= link_to('Logout', destroy_admin_session_path, :method => :delete) %></li>
         
         
